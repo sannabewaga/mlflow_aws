@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/gaura/Desktop/projects/mlflow_aws/mlruns/0/fc055a528d754e99936e39a47def5441/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fc055a528d754e99936e39a47def5441
+run_name: learned-moose-369
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750654416151
+status: 1
+tags: []
+user_id: gaura

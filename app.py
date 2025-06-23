@@ -40,7 +40,11 @@ if __name__=="__main__":
     X = data.drop(columns = ['quality'],axis = 1)
 
     X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=random.randint(1,100))
+    remote_server_uri = "http://ec2-13-221-14-181.compute-1.amazonaws.com:5000/"
+    tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
+    
+    mlflow.set_tracking_uri(remote_server_uri)
     with mlflow.start_run():
         alpha= 1
         l1_ratio = 0.5
@@ -60,9 +64,8 @@ if __name__=="__main__":
 
 
         ## remote server aws setup
-        remote_server_uri = ""
-        mlflow.set_tracking_uri(remote_server_uri)
-        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+        
+        
 
 
         if tracking_url_type_store!='file':
